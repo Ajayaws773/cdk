@@ -35,24 +35,50 @@ npx cdk deploy ===> to deploy the stack
 
 ====================
 step 6
-
+=======
 codecommit-stack.ts is basic code to deploy code commit & code build project
 code exports the code commit and code build names into CFT output
 
 =================
 
-Step 7
-
+step 7
+=======
 
 codepipeline-project1.ts is project for
 
 1.code commit with name
-2.code build project with source as code commit
-3.code deploy
+2.code build project with source as code commit 
+3.code deploy ((need to create type of deployment EC2/Lambda/ECS) 
+*in this code no application is deployed on Ec2/lambda
 4.code pipeline with 2 build stages. code commit will trigger the code pipeline
 
 ==============
 
+
+step 8
+=======
+
+codepipeline-project2.ts is project for
+
+1.IAM role creation for code build and policy will be attached
+2.code commit repo will be created
+3.code build project with build steps
+4.code pipeline with code commit as trigger and build stage
+
+====================
+
+step 9
+=======
+
+ec2creation.ts is project for
+
+1.Security group creation
+2.IAM role creation and policy
+3.IAM instance profile creation
+4.EBS volume definition
+5.Ec2 creation with parameters
+
+==================================================
 
 
 
