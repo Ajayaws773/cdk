@@ -33,5 +33,26 @@ step 5
 =======
 npx cdk deploy ===> to deploy the stack
 
+====================
+step 6
+
+codecommit-stack.ts is basic code to deploy code commit & code build project
+code exports the code commit and code build names into CFT output
+
+=================
+
+Step 7
+
+
+codepipeline-project1.ts is project for
+
+1.code commit with name
+2.code build project with source as code commit
+3.code deploy
+4.code pipeline with 2 build stages. code commit will trigger the code pipeline
+
+==============
+
+
 
 

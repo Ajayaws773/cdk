@@ -15,13 +15,13 @@ export class CodecommitStack extends cdk.Stack {
 new cdk.CfnOutput(this, 'codecommitrepo', {
   value: repository.repositoryName,
   description: 'The name of the repo',
- // exportName: 'avatarsBucket',
+ exportName: 'repo',
 });
 
 new cdk.CfnOutput(this, 'codebuildproject', {
   value: repository.repositoryName,
-  description: 'The name of the repo',
- // exportName: 'avatarsBucket',
+  description: 'The name of the codebuild project',
+ exportName: 'codebuild',
 });
 
   }
