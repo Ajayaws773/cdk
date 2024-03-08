@@ -34,6 +34,7 @@ step 5
 npx cdk deploy ===> to deploy the stack
 
 ====================
+
 step 6
 =======
 codecommit-stack.ts is basic code to deploy code commit & code build project
@@ -44,12 +45,17 @@ code exports the code commit and code build names into CFT output
 step 7
 =======
 
+* update the code as per your environment variables and requirements
+
 codepipeline-project1.ts is project for
 
 1.code commit with name
+
 2.code build project with source as code commit 
+
 3.code deploy ((need to create type of deployment EC2/Lambda/ECS) 
 *in this code no application is deployed on Ec2/lambda
+
 4.code pipeline with 2 build stages. code commit will trigger the code pipeline
 
 ==============
@@ -57,12 +63,16 @@ codepipeline-project1.ts is project for
 
 step 8
 =======
+* update the code as per your environment variables and requirements
 
 codepipeline-project2.ts is project for
 
 1.IAM role creation for code build and policy will be attached
+
 2.code commit repo will be created
+
 3.code build project with build steps
+
 4.code pipeline with code commit as trigger and build stage
 
 ====================
@@ -70,15 +80,51 @@ codepipeline-project2.ts is project for
 step 9
 =======
 
-ec2creation.ts is project for
+* update the code as per your environment variables and requirements
+
+ec2creation.ts is code for EC2 creation with parameters
 
 1.Security group creation
+
 2.IAM role creation and policy
+
 3.IAM instance profile creation
+
 4.EBS volume definition
+
 5.Ec2 creation with parameters
 
 ==================================================
 
+
+step 10
+=======
+
+* update the code as per your environment variables and requirements
+
+aurora-rds-creation.ts is code for Aurora mysql and Aurora Postgre
+
+1.Security group creation
+
+2.RDS cluster creation
+
+3. Secret will be created in secret manager for RDS admin password
+
+
+==================================================
+
+
+step 11
+=======
+
+* update the code as per your environment variables and requirements
+
+postgrerds.ts is code for postgre rds creation
+
+1.Security group creation
+
+2.RDS cluster creation
+
+3. Secret will be created in secret manager for RDS admin password
 
 
